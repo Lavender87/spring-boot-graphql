@@ -1,0 +1,34 @@
+type Author {
+    id: Long!
+    createdTime: String
+    firstName: String
+    lastName: String
+    books: [Book]
+
+}
+
+input AuthorInput {
+    firstName: String!
+    lastName: String!
+    gender:Gender
+}
+
+enum Gender{
+    MAN
+    WOMEN
+}
+
+input BookInput {
+    title: String!
+    isbn: String!
+    pageCount: Int
+    authorId: Long
+}
+
+type Book {
+    id: Long!
+    title: String!
+    isbn: String!
+    pageCount: Int
+    author: Author
+}

@@ -1,0 +1,35 @@
+server:
+#  address: 0.0.0.0
+  port: 8082
+#  sessionTimeout: 3600
+
+spring:
+  application:
+    name: spring-boot-graphql
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    continue-on-error: true
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false
+    username: root
+    password: 123456
+
+#  datasource:
+#    continue-on-error: true
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT
+#    username: root
+#    password: 123456
+
+
+#graphql:
+#  servlet:
+#    mapping: /resources/graphql
+#    enabled: true
+#    corsEnabled: true
